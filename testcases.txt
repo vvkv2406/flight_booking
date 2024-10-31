@@ -36,3 +36,9 @@ Test Cases:
 12) Execute the script by providing following input - exception handling - invalid action
    ./flight.sh DUMMY D0 1
    expected result : FAIL
+13) Execute the script by providing following input - exception handling - case sensitive
+   ./flight.sh book E0 1
+   expected result : FAIL
+14) Execute the script by providing following input - exception handling - case sensitive
+   ./flight.sh cancel F0 1
+   expected result : FAIL
