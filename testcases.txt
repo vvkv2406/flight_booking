@@ -1,0 +1,38 @@
+Test Cases:
+----------
+1) Execute the script by providing following input 
+   ./flight.sh BOOK A0 1
+   expected result : SUCCESS
+2) Execute the script by providing following input - seat boundry condition
+   ./flight.sh BOOK A7 1
+   expected result : SUCCESS
+3) Execute the script by providing following input - CANCEL validation
+   ./flight.sh CANCEL A7 1
+   expected result : SUCCESS
+4) Execute the script by providing following input - seat boundry condition
+   ./flight.sh BOOK A7 2
+   expected result : FAIL
+5) Execute the script by providing following input - seat boundry condition
+   ./flight.sh BOOK A6 2
+   expected result : SUCCESS
+6) Execute the script by providing following input - row boundry condition
+   ./flight.sh BOOK U0 1
+   expected result : FAIL
+7) Execute the script by providing following input - Already booked seat
+   ./flight.sh BOOK A0 1
+   expected result : FAIL
+8) Execute the script by providing following input - book entire row
+   ./flight.sh BOOK B0 8
+   expected result : SUCCESS
+9) Execute the script by providing following input - cancel entire row
+   ./flight.sh CANCEL B0 8
+   expected result : SUCCESS
+10) Execute the script by providing following input - exception handling - invalid number of inputs
+   ./flight.sh BOOK C1
+   expected result : FAIL
+11) Execute the script by providing following input - exception handling - negative numbers
+   ./flight.sh BOOK C1 -1
+   expected result : FAIL
+12) Execute the script by providing following input - exception handling - invalid action
+   ./flight.sh DUMMY D0 1
+   expected result : FAIL
